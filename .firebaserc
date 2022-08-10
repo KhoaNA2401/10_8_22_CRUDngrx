@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chart-1b529": {
+      "hosting": {
+        "AngularFirebase": [
+          "chart-1b529"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chart-1b529"
+  }
+}

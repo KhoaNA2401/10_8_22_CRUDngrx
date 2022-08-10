@@ -7,5 +7,9 @@ export interface Student{
     code: string,
     number: string,
   }
+}
 
+export interface Todo{
+  id: string,
+  description: string,
 }

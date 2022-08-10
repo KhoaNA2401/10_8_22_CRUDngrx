@@ -24,57 +24,54 @@ export const studentReducer = createReducer(
     error: error,
     isSuccess: true,
   })),
-/////////////GetData
-  on(StudentActions.getStudents, (state)=>({
+  /////////////GetData
+  on(StudentActions.getStudents, (state) => ({
     ...state,
     isLoading: true,
-   error: '',
+    error: '',
   })),
-  on(StudentActions.getStudentSuccess, (state, {Student})=>({
+  on(StudentActions.getStudentSuccess, (state, { Student }) => ({
     ...state,
     isLoading: false,
-    error: "",
-    students: Student
-
+    error: '',
+    students: Student,
   })),
-  on(StudentActions.getStudentFails, (state,{error})=>({
+  on(StudentActions.getStudentFails, (state, { error }) => ({
     ...state,
     isLoading: false,
     error: error,
     // isSuccess: true,
   })),
 
-//////////Update
-on(StudentActions.updateStudent, (state) => {
-  return { ...state, isLoading: true };
-}),
-on(StudentActions.updateStudentSuccess, (state, action) => ({
-  ...state,
-  isLoading: true,
-})),
-on(StudentActions.updateStudentFails, (state, { error }) => ({
-  ...state,
-  isLoading: false,
-  error: error,
-  isSuccess: true,
-})),
+  //////////Update
+  on(StudentActions.updateStudent, (state) => {
+    return { ...state, isLoading: true };
+  }),
+  on(StudentActions.updateStudentSuccess, (state, action) => ({
+    ...state,
+    isLoading: true,
+  })),
+  on(StudentActions.updateStudentFails, (state, { error }) => ({
+    ...state,
+    isLoading: false,
+    error: error,
+    isSuccess: true,
+  })),
 
-
-
-/////////////Delete
-on(StudentActions.deleteStudent, (state) => {
-  return { ...state, isLoading: true };
-}),
-on(StudentActions.deleteStudentSuccess, (state) => ({
-  ...state,
-  isLoading: true,
-})),
-on(StudentActions.deleteStudentFails, (state, { error }) => ({
-  ...state,
-  isLoading: false,
-  error: error,
-  isSuccess: true,
-})),
+  /////////////Delete
+  on(StudentActions.deleteStudent, (state) => {
+    return { ...state, isLoading: true };
+  }),
+  on(StudentActions.deleteStudentSuccess, (state) => ({
+    ...state,
+    isLoading: true,
+  })),
+  on(StudentActions.deleteStudentFails, (state, { error }) => ({
+    ...state,
+    isLoading: false,
+    error: error,
+    isSuccess: true,
+  })),
 
 
 );

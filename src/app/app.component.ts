@@ -123,6 +123,6 @@ export class AppComponent implements OnInit {
   deleteTodo(id: string): void {
     console.log(id);
     this.store.dispatch(TodoActions.deleteTodo({ id: id }));
-    //this.store.dispatch(TodoActions.deleteTodo({ id: id.toString() }));
+
   }
 }
